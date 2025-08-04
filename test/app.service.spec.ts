@@ -1,4 +1,4 @@
-import { AppService } from './app.service';
+import { AppService } from '../src/app.service';
 
 describe('AppService', () => {
   it('should return a 1 when the pair is "ca" ', () => {
@@ -26,6 +26,14 @@ describe('AppService', () => {
   });
 
   it('should return a 7 when the pair is "ca"', () => {
+    const appService = new AppService();
+    const array = ['cantar', 'canto', 'canta', 'cantaba', 'contrataca', 'caca'];
+    const word = appService.getPairValues(array, 'ca');
+
+    expect(word).toEqual({ pair: 'ca', count: 7 });
+  });
+
+  it('should return a 0 when the pair is "ca" ', () => {
     const appService = new AppService();
     const array = ['cantar', 'canto', 'canta', 'cantaba', 'contrataca', 'caca'];
     const word = appService.getPairValues(array, 'ca');

@@ -1,28 +1,5 @@
 import { Injectable } from '@nestjs/common';
 
-export const corpus = [
-  'cantar',
-  'cantaba',
-  'cantando',
-  'cantante',
-  'cantado',
-  'canto',
-  'canta',
-  'cantas',
-  'cantamos',
-  'cantarán',
-  'bailar',
-  'bailaba',
-  'bailando',
-  'bailado',
-  'baile',
-  'baila',
-  'bailas',
-  'bailamos',
-  'bailarás',
-  'bailarín',
-];
-
 export interface Pair {
   pair: string;
   count: number;
