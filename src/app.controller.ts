@@ -6,7 +6,7 @@ import { AppDto } from './app.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Post('pair')
+  @Post('search')
   getPairValues(@Body() body: AppDto) {
     return this.appService.getPairValues(body.corpus, body.pair);
   }

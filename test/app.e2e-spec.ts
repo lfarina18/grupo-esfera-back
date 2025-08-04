@@ -29,7 +29,7 @@ describe('AppController (e2e)', () => {
 
   it('should return 400 when pair is empty', () => {
     return request(app.getHttpServer() as unknown as Server)
-      .post('/pair')
+      .post('/search')
       .send({
         pair: '',
         corpus: ['cantar', 'canto'],
@@ -49,7 +49,7 @@ describe('AppController (e2e)', () => {
 
   it('should return 400 when corpus is empty', () => {
     return request(app.getHttpServer() as unknown as Server)
-      .post('/pair')
+      .post('/search')
       .send({
         pair: 'ca',
         corpus: [],
@@ -68,7 +68,7 @@ describe('AppController (e2e)', () => {
 
   it('should return count when request is valid', () => {
     return request(app.getHttpServer() as unknown as Server)
-      .post('/pair')
+      .post('/search')
       .send({
         pair: 'ca',
         corpus: ['cantar', 'canto'],
